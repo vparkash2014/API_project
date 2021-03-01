@@ -1,9 +1,9 @@
-const url = 'https://api.nasa.gov/planetary/apod?api_key=';
-const api_key = 'ZgpDOl3YhC0v5xlpXpkVxceElBYpx4ycjIeEhmAU';
-
 const fetchApodDate = () => {
     const dateStr = dateObjToStr(randomDate());
+    const url = 'https://api.nasa.gov/planetary/apod?api_key=';
+    const api_key = 'ZgpDOl3YhC0v5xlpXpkVxceElBYpx4ycjIeEhmAU';
     const fullUrl = `${url}${api_key}&date=${dateStr}`
+    console.log(fullUrl);
 
     const promise = fetch(fullUrl)
     .then(response => response.json())
